@@ -1,0 +1,17 @@
+name: component-nginx
+summary: Deploys NGINX as an application container
+maintainer: Charles Butler <charles.butler@canonical.com>
+description: |
+  basic NGINX compose charm demonstration
+tags:
+  - misc
+subordinate: false
+provides:
+  website:
+    interface: http
+processes:
+    nginx:
+        type: docker
+        image: nginx
+        ports:
+            - 80:80

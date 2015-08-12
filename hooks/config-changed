@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+
+WEB_PORT=$(config-get port)
+
+process-launch nginx
+
+# Defined in the process yaml
+open-port 80/tcp
+

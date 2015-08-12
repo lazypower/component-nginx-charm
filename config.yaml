@@ -1,0 +1,5 @@
+options:
+  port:
+    type: integer
+    default: 80
+    description: Port to bind the container to

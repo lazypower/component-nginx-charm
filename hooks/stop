@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+
+DOCKER_IMAGE=$(config-get nginx_container)
+
+# Remove container
+docker rm -f nginx
+
+# remove image
+docker rmi -f $DOCKER_IMAGE
